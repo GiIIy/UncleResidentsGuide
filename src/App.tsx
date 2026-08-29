@@ -23,9 +23,6 @@ import { useState } from "react";
 import "./App.css";
 import uncleLogo from "./assets/uncle-logo.jpg";
 
-/* =========================================================
-   REAL UNCLE LEEDS LINKS
-========================================================= */
 
 const LINKS = {
   hostingRoom:
@@ -44,9 +41,6 @@ const LINKS = {
     "https://join.uncle.co.uk/leeds-maintenance-diagnosis-visit",
 };
 
-/* =========================================================
-   TYPES
-========================================================= */
 
 type Facility = {
   name: string;
@@ -67,9 +61,6 @@ type Floor = {
   spaces: string[];
 };
 
-/* =========================================================
-   BUILDING DATA
-========================================================= */
 
 const blockB: Floor[] = [
   {
@@ -121,9 +112,6 @@ const blockC: Floor[] = [
   },
 ];
 
-/* =========================================================
-   FACILITIES
-========================================================= */
 
 const facilities: Facility[] = [
   {
@@ -150,9 +138,6 @@ const facilities: Facility[] = [
   },
 ];
 
-/* =========================================================
-   BOOKINGS
-========================================================= */
 
 const bookings: Booking[] = [
   {
@@ -175,10 +160,6 @@ const bookings: Booking[] = [
   },
 ];
 
-/* =========================================================
-   COMPONENT
-========================================================= */
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeBlock, setActiveBlock] = useState<"B" | "C">("B");
@@ -187,9 +168,6 @@ function App() {
 
   return (
     <div className="app">
-      {/* =====================================================
-          HEADER
-      ====================================================== */}
 
       <header className="header">
         <div className="header-inner">
@@ -209,10 +187,6 @@ function App() {
           </button>
         </div>
       </header>
-
-      {/* =====================================================
-          MENU
-      ====================================================== */}
 
       {menuOpen && (
         <div className="menu-overlay">
@@ -259,10 +233,7 @@ function App() {
       )}
 
       <main>
-        {/* =====================================================
-            WELCOME
-        ====================================================== */}
-
+        
         <section className="welcome">
           <div>
             <p className="eyebrow">UNCLE LEEDS / RESIDENT GUIDE</p>
@@ -282,10 +253,6 @@ function App() {
           </p>
         </section>
 
-        {/* =====================================================
-            QUICK ACCESS
-        ====================================================== */}
-
         <section className="quick-section">
           <div className="section-heading">
             <div>
@@ -295,7 +262,6 @@ function App() {
           </div>
 
           <div className="main-actions">
-            {/* BOOK */}
 
             <a href="#bookings" className="primary-action">
               <div className="action-icon">
@@ -310,8 +276,6 @@ function App() {
 
               <ArrowUpRight size={25} />
             </a>
-
-            {/* MAINTENANCE */}
 
             <a
               href={LINKS.maintenance}
@@ -331,7 +295,6 @@ function App() {
               <ArrowUpRight size={20} />
             </a>
 
-            {/* BUILDING */}
 
             <a href="#building" className="secondary-action">
               <div className="small-action-icon">
@@ -346,7 +309,6 @@ function App() {
               <ChevronRight size={20} />
             </a>
 
-            {/* WHATSAPP */}
 
             <a
               href={LINKS.whatsapp}
@@ -367,10 +329,6 @@ function App() {
             </a>
           </div>
         </section>
-
-        {/* =====================================================
-            BOOKINGS
-        ====================================================== */}
 
         <section className="booking-section" id="bookings">
           <div className="section-heading">
@@ -418,10 +376,6 @@ function App() {
           </div>
         </section>
 
-        {/* =====================================================
-            BUILDING GUIDE
-        ====================================================== */}
-
         <section className="building-section" id="building">
           <div className="section-heading">
             <div>
@@ -430,7 +384,6 @@ function App() {
             </div>
           </div>
 
-          {/* BLOCK SELECTOR */}
 
           <div className="block-selector">
             <button
@@ -448,7 +401,6 @@ function App() {
             </button>
           </div>
 
-          {/* FLOOR LIST */}
 
           <div className="floor-list">
             {currentBlock.map((floor) => (
@@ -474,11 +426,7 @@ function App() {
             ))}
           </div>
         </section>
-
-        {/* =====================================================
-            OPENING HOURS
-        ====================================================== */}
-
+        
         <section className="hours-section">
           <div className="section-heading">
             <div>
@@ -518,10 +466,6 @@ function App() {
             })}
           </div>
         </section>
-
-        {/* =====================================================
-            IMPORTANT INFORMATION
-        ====================================================== */}
 
         <section className="info-section" id="information">
           <div className="section-heading">
@@ -578,10 +522,6 @@ function App() {
           </div>
         </section>
 
-        {/* =====================================================
-            MAINTENANCE
-        ====================================================== */}
-
         <section className="maintenance-section" id="maintenance">
           <div className="maintenance-icon">
             <Wrench size={25} strokeWidth={1.7} />
@@ -610,10 +550,6 @@ function App() {
             <ArrowUpRight size={18} />
           </a>
         </section>
-
-        {/* =====================================================
-            COMMUNITY
-        ====================================================== */}
 
         <section className="community-section" id="community">
           <div className="community-icon">
@@ -645,9 +581,6 @@ function App() {
         </section>
       </main>
 
-      {/* =====================================================
-          MOBILE NAV
-      ====================================================== */}
 
       <nav className="bottom-nav">
         <a href="#" className="nav-item active">
