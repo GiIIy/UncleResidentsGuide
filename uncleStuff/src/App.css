@@ -1,0 +1,1072 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --cream: #f7f3e7;
+  --black: #050505;
+  --white: #ffffff;
+  --orange: #ff5a00;
+  --grey: #6d6a62;
+
+  font-family: "DM Sans", sans-serif;
+  color: var(--black);
+  background: var(--cream);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 10px;
+
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.85;
+
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.eyebrow {
+  color: var(--orange);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: var(--white);
+
+  border-bottom: 1px solid var(--black);
+}
+
+.header-inner {
+  height: 76px;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  width: 105px;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header-location {
+  margin-left: auto;
+  margin-right: 16px;
+
+  padding-left: 18px;
+
+  border-left: 1px solid var(--black);
+
+  color: var(--orange);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.menu-button {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--black);
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.menu-button span {
+  display: block;
+
+  width: 18px;
+  height: 1px;
+
+  background: var(--black);
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.menu-panel {
+  width: min(440px, 100%);
+  min-height: 100vh;
+
+  margin-left: auto;
+
+  padding: 20px;
+
+  background: var(--cream);
+
+  border-left: 1px solid var(--black);
+}
+
+.menu-header {
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.menu-logo {
+  width: 105px;
+}
+
+.close-button {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+  background: transparent;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links a {
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--black);
+
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.menu-links a:hover {
+  color: var(--orange);
+}
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome {
+  padding: 45px 24px 40px;
+
+  border-bottom: 1px solid var(--black);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.welcome h1 {
+  margin-top: 15px;
+
+  font-size: clamp(78px, 11vw, 140px);
+  line-height: 0.74;
+
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.welcome-text {
+  max-width: 310px;
+
+  margin-bottom: 4px;
+
+  color: var(--grey);
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.section-number {
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   QUICK ACCESS
+========================================================= */
+
+.quick-section {
+  padding: 45px 24px 50px;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.main-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+}
+
+.primary-action,
+.secondary-action,
+.community-action {
+  border-right: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.primary-action {
+  grid-column: span 2;
+
+  min-height: 135px;
+
+  padding: 20px;
+
+  background: var(--orange);
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+}
+
+.primary-action:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.action-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid currentColor;
+}
+
+.action-text {
+  flex: 1;
+}
+
+.action-text > span {
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.action-text h3 {
+  margin-top: 4px;
+
+  font-size: 37px;
+  line-height: 0.9;
+}
+
+.action-text p {
+  margin-top: 7px;
+
+  font-size: 11px;
+}
+
+.secondary-action,
+.community-action {
+  min-height: 105px;
+
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.secondary-action:hover {
+  background: var(--white);
+}
+
+.community-action {
+  background: var(--black);
+  color: var(--white);
+}
+
+.community-action:hover {
+  background: var(--orange);
+  color: var(--black);
+}
+
+.small-action-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid currentColor;
+}
+
+.secondary-action > div:nth-child(2),
+.community-action > div:nth-child(2) {
+  flex: 1;
+}
+
+.secondary-action h3,
+.community-action h3 {
+  font-size: 25px;
+  line-height: 0.9;
+}
+
+.secondary-action p,
+.community-action p {
+  margin-top: 5px;
+
+  color: var(--grey);
+
+  font-size: 10px;
+}
+
+.community-action p {
+  color: #aaa;
+}
+
+/* =========================================================
+   BOOKINGS
+========================================================= */
+
+.booking-section {
+  padding: 50px 24px;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.section-description {
+  margin-bottom: 22px;
+
+  color: var(--grey);
+
+  font-size: 12px;
+}
+
+.booking-list {
+  border-top: 1px solid var(--black);
+}
+
+.booking-row {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border-bottom: 1px solid var(--black);
+
+  transition: background 0.18s ease;
+}
+
+.booking-row:hover {
+  background: var(--orange);
+}
+
+.booking-number {
+  width: 27px;
+
+  font-family: "Barlow Condensed", sans-serif;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.booking-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+}
+
+.booking-info {
+  flex: 1;
+}
+
+.booking-info h3 {
+  font-size: 26px;
+  line-height: 0.9;
+}
+
+.booking-info p {
+  margin-top: 4px;
+
+  color: var(--grey);
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   BUILDING GUIDE
+========================================================= */
+
+.building-section {
+  padding: 50px 24px;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.block-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border: 1px solid var(--black);
+}
+
+.block-selector button {
+  min-height: 48px;
+
+  border: 0;
+  background: transparent;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.block-selector button + button {
+  border-left: 1px solid var(--black);
+}
+
+.block-selector button.active {
+  background: var(--black);
+  color: var(--white);
+}
+
+.floor-list {
+  margin-top: 20px;
+
+  border-top: 1px solid var(--black);
+}
+
+.floor {
+  border-bottom: 1px solid var(--black);
+}
+
+.floor summary {
+  min-height: 78px;
+
+  padding: 14px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+.floor summary::-webkit-details-marker {
+  display: none;
+}
+
+.floor summary span {
+  color: var(--orange);
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.floor summary h3 {
+  margin-top: 4px;
+
+  font-size: 28px;
+  line-height: 0.9;
+}
+
+.floor-chevron {
+  transition: transform 0.2s ease;
+}
+
+.floor[open] .floor-chevron {
+  transform: rotate(180deg);
+}
+
+.floor-spaces {
+  padding-bottom: 10px;
+}
+
+.space {
+  min-height: 43px;
+
+  padding: 0 5px 0 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #bdb8aa;
+
+  font-size: 12px;
+}
+
+.space svg {
+  color: var(--grey);
+}
+
+/* =========================================================
+   HOURS
+========================================================= */
+
+.hours-section {
+  padding: 50px 24px;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.facility-list {
+  border-top: 1px solid var(--black);
+}
+
+.facility {
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.facility-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+}
+
+.facility-details {
+  flex: 1;
+}
+
+.facility-details h3 {
+  font-size: 25px;
+  line-height: 0.9;
+}
+
+.facility-details p {
+  margin-top: 4px;
+
+  color: var(--grey);
+
+  font-size: 9px;
+}
+
+.facility-status {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.facility-status small {
+  color: var(--grey);
+
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.open-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #299861;
+}
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.info-section {
+  padding: 50px 24px;
+
+  border-bottom: 1px solid var(--black);
+}
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid var(--black);
+  border-left: 1px solid var(--black);
+}
+
+.info-card {
+  min-height: 130px;
+
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+
+  transition: background 0.18s ease;
+}
+
+.info-card:hover {
+  background: var(--orange);
+}
+
+.info-card > div {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.info-card h3 {
+  font-size: 28px;
+  line-height: 0.9;
+}
+
+.info-card p {
+  margin-top: 5px;
+
+  color: var(--grey);
+
+  font-size: 9px;
+}
+
+.info-card > svg:last-child {
+  align-self: flex-end;
+}
+
+/* =========================================================
+   MAINTENANCE
+========================================================= */
+
+.maintenance-section {
+  padding: 50px 24px;
+
+  background: var(--orange);
+
+  border-bottom: 1px solid var(--black);
+}
+
+.maintenance-icon,
+.community-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--black);
+
+  margin-bottom: 42px;
+}
+
+.maintenance-section h2,
+.community-section h2 {
+  margin-top: 12px;
+
+  font-size: clamp(62px, 9vw, 100px);
+}
+
+.maintenance-description {
+  max-width: 430px;
+
+  margin-top: 22px;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.black-button,
+.white-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  min-height: 48px;
+
+  margin-top: 24px;
+
+  padding: 0 19px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.black-button {
+  background: var(--black);
+  color: var(--white);
+}
+
+.black-button:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.community-section {
+  padding: 50px 24px;
+
+  background: var(--black);
+  color: var(--white);
+}
+
+.community-section .eyebrow {
+  color: var(--orange);
+}
+
+.community-section p:not(.eyebrow) {
+  max-width: 430px;
+
+  margin-top: 22px;
+
+  color: #aaa;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.community-icon {
+  border-color: var(--white);
+}
+
+.white-button {
+  background: var(--white);
+  color: var(--black);
+}
+
+.white-button:hover {
+  background: var(--orange);
+}
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+.bottom-nav {
+  display: none;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  body {
+    padding-bottom: 70px;
+  }
+
+  .header-inner {
+    height: 68px;
+
+    padding: 0 18px;
+  }
+
+  .logo {
+    font-size: 38px;
+  }
+
+  .welcome {
+    padding: 38px 18px 32px;
+
+    display: block;
+  }
+
+  .welcome h1 {
+    font-size: clamp(76px, 25vw, 120px);
+  }
+
+  .welcome-text {
+    margin-top: 25px;
+
+    font-size: 12px;
+  }
+
+  .quick-section,
+  .booking-section,
+  .building-section,
+  .hours-section,
+  .info-section,
+  .maintenance-section,
+  .community-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  /* QUICK ACCESS */
+
+  .main-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-action {
+    grid-column: auto;
+
+    min-height: 125px;
+  }
+
+  .action-text h3 {
+    font-size: 33px;
+  }
+
+  .secondary-action,
+  .community-action {
+    min-height: 86px;
+  }
+
+  .secondary-action h3,
+  .community-action h3 {
+    font-size: 23px;
+  }
+
+  /* BOOKINGS */
+
+  .booking-row {
+    min-height: 75px;
+  }
+
+  .booking-info h3 {
+    font-size: 24px;
+  }
+
+  /* BUILDING */
+
+  .building-row {
+    min-height: 80px;
+  }
+
+  /* HOURS */
+
+  .facility {
+    min-height: 75px;
+  }
+
+  .facility-details h3 {
+    font-size: 24px;
+  }
+
+  .facility-status {
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 2px;
+  }
+
+  .facility-status span:nth-child(2) {
+    display: none;
+  }
+
+  /* INFO */
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card {
+    min-height: 105px;
+  }
+
+  /* MAINTENANCE / COMMUNITY */
+
+  .maintenance-section h2,
+  .community-section h2 {
+    font-size: 65px;
+  }
+
+  /* MOBILE NAV */
+
+  .bottom-nav {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 70px;
+
+    z-index: 90;
+
+    display: flex;
+
+    background: var(--black);
+
+    border-top: 1px solid #333;
+  }
+
+  .nav-item {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    color: #888;
+
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  .nav-item.active {
+    color: var(--orange);
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+  .welcome h1 {
+    font-size: 72px;
+  }
+
+  h2 {
+    font-size: 43px;
+  }
+
+  .action-text h3 {
+    font-size: 30px;
+  }
+
+  .facility-status small {
+    font-size: 8px;
+  }
+}
+
